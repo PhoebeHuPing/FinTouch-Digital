@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASB Account Tile Component</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+    <div class="account-tile" role="region" aria-label="Account Summary">
+        <div class="tile-header">
+            <div>
+                <div class="account-name">Streamline</div>
+                <div class="account-number">12-3456-7890123-00</div>
+            </div>
+            <div class="icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>
+            </div>
+        </div>
+        
+        <div class="tile-body">
+            <div class="balance-label">Available Balance</div>
+            <div class="balance-amount" id="balance">$4,250.85</div>
+            <div class="balance-hidden" id="balance-masked">••••••</div>
+        </div>
+
+        <div class="tile-footer">
+            <button class="btn-toggle" id="toggle-balance" aria-pressed="false">Hide Balance</button>
+            <a href="#" class="link-details">View details &rsaquo;</a>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            $('#toggle-balance').click(function() {
+                const isHidden = $('#balance').is(':visible');
+                if (isHidden) {
+                    $('#balance').fadeOut(100, function() {
+                        $('#balance-masked').fadeIn(100);
+                        $('#toggle-balance').text('Show Balance').attr('aria-pressed', 'true');
+                    });
+                } else {
+                    $('#balance-masked').fadeOut(100, function() {
+                        $('#balance').fadeIn(100);
+                        $('#toggle-balance').text('Hide Balance').attr('aria-pressed', 'false');
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

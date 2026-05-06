@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ASB Transaction Alert</title>
+    <style type="text/css">
+        /* Base Styles */
+        body { margin: 0; padding: 0; min-width: 100%; font-family: Arial, Helvetica, sans-serif; background-color: #f4f4f4; color: #262626; }
+        table { border-spacing: 0; }
+        td { padding: 0; }
+        img { border: 0; }
+
+        /* Layout */
+        .wrapper { width: 100%; table-layout: fixed; background-color: #f4f4f4; padding-bottom: 40px; }
+        .main { background-color: #ffffff; margin: 0 auto; width: 100%; max-width: 600px; border-spacing: 0; font-family: sans-serif; color: #262626; }
+
+        /* Header */
+        .header { background-color: #ffd100; padding: 20px; text-align: left; }
+        .logo { font-size: 28px; font-weight: bold; color: #262626; text-decoration: none; }
+
+        /* Content */
+        .content { padding: 30px 20px; line-height: 1.5; }
+        .title { font-size: 24px; font-weight: bold; margin-bottom: 20px; color: #262626; }
+        .transaction-box { background-color: #f9f9f9; border-left: 4px solid #ffd100; padding: 15px; margin: 20px 0; }
+        .label { font-size: 12px; color: #666; text-transform: uppercase; letter-spacing: 1px; }
+        .value { font-size: 18px; font-weight: bold; margin-bottom: 10px; }
+
+        /* Button */
+        .button-container { padding: 20px 0; }
+        .button { background-color: #262626; border-radius: 4px; color: #ffffff; display: inline-block; font-size: 16px; font-weight: bold; line-height: 50px; text-align: center; text-decoration: none; width: 200px; -webkit-text-size-adjust: none; }
+
+        /* Footer */
+        .footer { background-color: #262626; color: #ffffff; padding: 20px; text-align: center; font-size: 12px; }
+        .footer a { color: #ffd100; text-decoration: underline; }
+
+        /* Mobile Adjustments */
+        @media screen and (max-width: 600px) {
+            .main { width: 100% !important; }
+            .button { width: 100% !important; }
+        }
+    </style>
+</head>
+<body>
+    <center class="wrapper">
+        <table class="main" role="presentation">
+            <!-- Header -->
+            <tr>
+                <td class="header">
+                    <div class="logo">ASB</div>
+                </td>
+            </tr>
+
+            <!-- Hero Section -->
+            <tr>
+                <td class="content">
+                    <h1 class="title">Transaction Alert</h1>
+                    <p>Hi there,</p>
+                    <p>We're letting you know that a transaction has occurred on your account ending in <strong>...1234</strong>.</p>
+                    
+                    <div class="transaction-box">
+                        <div class="label">Amount</div>
+                        <div class="value">$1,250.00 NZD</div>
+                        
+                        <div class="label">Merchant</div>
+                        <div class="value">APPLE STORE AUCKLAND</div>
+                        
+                        <div class="label">Date & Time</div>
+                        <div class="value">May 6, 2026 - 14:30 NZST</div>
+                    </div>
+
+                    <p>If this was you, you don't need to do anything. If you don't recognize this transaction, please contact us immediately.</p>
+                    
+                    <div class="button-container">
+                        <a href="https://www.asb.co.nz" class="button">Log in to FastNet</a>
+                    </div>
+                </td>
+            </tr>
+
+            <!-- Footer -->
+            <tr>
+                <td class="footer">
+                    <p>&copy; 2026 ASB Bank Limited. All rights reserved.</p>
+                    <p>ASB Bank Limited, 12 Jellicoe Street, Auckland, NZ</p>
+                    <p>
+                        <a href="#">Privacy Policy</a> | 
+                        <a href="#">Contact Us</a> | 
+                        <a href="#">Unsubscribe</a>
+                    </p>
+                </td>
+            </tr>
+        </table>
+    </center>
+</body>
+</html>

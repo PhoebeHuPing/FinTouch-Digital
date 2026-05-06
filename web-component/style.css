@@ -1,0 +1,110 @@
+/* Account Tile Component Styles */
+:root {
+    --asb-yellow: #ffd100;
+    --asb-dark: #262626;
+    --asb-gray: #f4f4f4;
+    --asb-text-secondary: #666;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #e0e0e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.account-tile {
+    background-color: #fff;
+    width: 320px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: transform 0.2s ease;
+}
+
+.account-tile:hover {
+    transform: translateY(-5px);
+}
+
+.tile-header {
+    background-color: var(--asb-yellow);
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.account-name {
+    font-weight: bold;
+    color: var(--asb-dark);
+    font-size: 16px;
+}
+
+.account-number {
+    font-size: 12px;
+    color: rgba(38, 38, 38, 0.7);
+}
+
+.tile-body {
+    padding: 25px 20px;
+}
+
+.balance-label {
+    font-size: 12px;
+    color: var(--asb-text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.balance-amount {
+    font-size: 28px;
+    font-weight: bold;
+    margin: 5px 0 15px 0;
+    color: var(--asb-dark);
+}
+
+.balance-hidden {
+    display: none;
+    font-size: 28px;
+    font-weight: bold;
+    color: var(--asb-text-secondary);
+}
+
+.tile-footer {
+    padding: 15px 20px;
+    border-top: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-toggle {
+    background: none;
+    border: 1px solid var(--asb-dark);
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 600;
+    transition: all 0.2s;
+}
+
+.btn-toggle:hover {
+    background-color: var(--asb-dark);
+    color: #fff;
+}
+
+.link-details {
+    color: var(--asb-dark);
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+}
+
+.link-details:hover {
+    text-decoration: underline;
+}
