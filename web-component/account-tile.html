@@ -11,35 +11,36 @@
 <body>
 
     <!-- AEM Component: AccountTile -->
-    <!-- Description: A modular tile for dashboard account summaries -->
-    <div class="account-tile" role="region" aria-label="Account Summary">
-        <div class="tile-header">
+    <!-- HTL implementation for dynamic authoring -->
+    <div class="account-tile" 
+         data-sly-use.model="nz.co.asb.models.AccountTileModel"
+         role="region" 
+         aria-label="${properties.ariaLabel || 'Account Summary'}">
+        
+        <div class="tile-header" style="background-color: ${properties.themeColor || '#ffd100'}">
             <div>
-                <!-- Field: AccountName (String, Required) -->
-                <div class="account-name">Streamline</div>
-                <!-- Field: AccountNumber (String, Pattern: ##-####-#######-##) -->
-                <div class="account-number">12-3456-7890123-00</div>
+                <div class="account-name" data-sly-text="${properties.accountName}">Streamline</div>
+                <div class="account-number" data-sly-text="${properties.accountNumber}">12-3456-7890123-00</div>
             </div>
             <div class="icon">
-                <!-- Field: AccountIcon (Icon Picker / SVG Reference) -->
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>
+                <!-- Field: AccountIcon (Path to SVG in DAM) -->
+                <img data-sly-test="${properties.iconPath}" src="${properties.iconPath}" alt="" />
+                <svg data-sly-test="${!properties.iconPath}" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>
             </div>
         </div>
         
         <div class="tile-body">
-            <!-- Field: BalanceLabel (String, Default: "Available Balance") -->
-            <div class="balance-label">Available Balance</div>
-            <!-- Field: InitialBalance (Currency, Mock Data) -->
-            <div class="balance-amount" id="balance">$4,250.85</div>
+            <div class="balance-label" data-sly-text="${properties.balanceLabel || 'Available Balance'}">Available Balance</div>
+            <div class="balance-amount" id="balance">${properties.initialBalance}</div>
             <div class="balance-hidden" id="balance-masked">••••••</div>
         </div>
 
         <div class="tile-footer">
-            <!-- Field: ToggleButtonText (String, Default: "Hide Balance") -->
-            <button class="btn-toggle" id="toggle-balance" aria-pressed="false">Hide Balance</button>
-            <!-- Field: ActionLink (URL) -->
-            <!-- Field: ActionLinkText (String) -->
-            <a href="#" class="link-details">View details &rsaquo;</a>
+            <button class="btn-toggle" id="toggle-balance" aria-pressed="false" 
+                    data-sly-text="${properties.toggleText || 'Hide Balance'}">Hide Balance</button>
+            <a href="${properties.actionLink || '#'}" class="link-details">
+                ${properties.actionLinkText || 'View details'} &rsaquo;
+            </a>
         </div>
     </div>
 
