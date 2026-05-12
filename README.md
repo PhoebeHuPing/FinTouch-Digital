@@ -40,6 +40,36 @@ Email development is notoriously difficult due to fragmented client support. My 
 
 ---
 
+## 🏗️ CMS & Marketing Automation Ready (AEM Focus)
+
+To meet ASB's operational requirements, these assets are designed with **component-based authoring** in mind (e.g., Adobe Experience Manager / Adobe Campaign).
+
+### Component-Based Architecture
+Rather than static HTML, the code is structured as modular components. In a production AEM environment, the following fields are exposed via **Dialogs** for Marketing stakeholders:
+
+| Component | Authorable Field | Type | Description |
+| :--- | :--- | :--- | :--- |
+| **Account Tile** | Account Name | String | e.g., "Streamline", "Savings Plus" |
+| | Theme Color | Select | ASB Yellow, Charcoal, or Neutral |
+| | Icon Selection | Image/SVG | Pick from ASB's centralized DAM library |
+| | CTA Link | URL | Destination for the "View details" action |
+| **Email Template** | Salutation | Dynamic | Personalized via `{{recipient.firstName}}` |
+| | Hero Image | DAM Ref | Asset path from AEM Assets |
+| | Urgent Banner | Boolean | Toggle a red "Urgent" top border for critical alerts |
+
+### Data Mapping
+Transaction details (Amount, Merchant, Date) are annotated for integration with **Adobe Campaign Standard (ACS)**, ensuring seamless mapping between bank data streams and customer-facing templates.
+
+---
+
+## 🗺️ Project Roadmap & Job Alignment
+
+This project is actively developed to align with the **ASB Digital Channels Developer** role. For a detailed breakdown of completed tasks and upcoming features (including SMS and Risk Management protocols), please see:
+
+👉 **[DEVELOPMENT_PLAN.md](./DEVELOPMENT_PLAN.md)**
+
+---
+
 ## 📂 Project Structure
 
 ```text

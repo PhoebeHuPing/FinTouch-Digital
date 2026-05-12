@@ -51,27 +51,35 @@
                 </td>
             </tr>
 
-            <!-- Hero Section -->
+            <!-- AEM/ACS Email Component: Main Hero -->
             <tr>
                 <td class="content">
+                    <!-- Field: Heading (String) -->
                     <h1 class="title">Transaction Alert</h1>
+                    <!-- Field: Salutation (String, e.g., "Hi {{firstName}}") -->
                     <p>Hi there,</p>
                     <p>We're letting you know that a transaction has occurred on your account ending in <strong>...1234</strong>.</p>
                     
                     <div class="transaction-box">
+                        <!-- Mapping: TransactionAmount (Data Source) -->
                         <div class="label">Amount</div>
                         <div class="value">$1,250.00 NZD</div>
                         
+                        <!-- Mapping: MerchantName (Data Source) -->
                         <div class="label">Merchant</div>
                         <div class="value">APPLE STORE AUCKLAND</div>
                         
+                        <!-- Mapping: TransactionDate (Data Source) -->
                         <div class="label">Date & Time</div>
                         <div class="value">May 6, 2026 - 14:30 NZST</div>
                     </div>
 
+                    <!-- Field: BodyText (RichText) -->
                     <p>If this was you, you don't need to do anything. If you don't recognize this transaction, please contact us immediately.</p>
                     
                     <div class="button-container">
+                        <!-- Field: CTA_Link (URL) -->
+                        <!-- Field: CTA_Label (String) -->
                         <a href="https://www.asb.co.nz" class="button">Log in to FastNet</a>
                     </div>
                 </td>
