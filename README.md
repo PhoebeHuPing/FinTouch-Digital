@@ -7,6 +7,7 @@ A professional, high-fidelity demonstration of banking communication assets, des
 This suite includes:
 1.  **Transaction Alert Email**: A robust, table-based HTML email template optimized for high compatibility (Outlook, Gmail, iOS Mail).
 2.  **Account Tile Web Component**: A modern, interactive UI component for a banking dashboard, featuring a balance toggle and responsive design.
+3.  **SMS Template Library**: A collection of compliant, high-conversion SMS templates optimized for character limits and security.
 
 ---
 
@@ -76,6 +77,8 @@ This project is actively developed to align with the **ASB Digital Channels Deve
 OmniChannel/
 ├── email/
 │   └── transaction-alert.html   # Email Template
+├── sms/
+│   └── sms-library.md           # SMS Template Library
 ├── web-component/
 │   ├── account-tile.html        # Component Demo
 │   └── style.css                # Component Styles
