@@ -12,8 +12,8 @@ Deliver a high-fidelity demonstration of digital content experiences that connec
 - [x] **Stakeholder Documentation**: Add a "CMS & Marketing Automation Ready" section to the README explaining dialog configurations for non-technical users.
 - [x] **Personalization Logic**: Define data mapping requirements for Adobe Campaign Standard (ACS).
 
-## 🟡 Phase 2: Risk Management & QA (Next Priority)
-- [ ] **Risk Gate Protocol**: Create a `TESTING.md` file documenting the quality assurance process.
+## 🟡 Phase 2: Risk Management & QA (Status: In Progress)
+- [x] **Risk Gate Protocol**: Create a `TESTING.md` file documenting the quality assurance process.
 - [ ] **QA Checklist**:
     - [ ] Cross-client email compatibility (Outlook, Gmail, iOS).
     - [ ] WCAG 2.1 Accessibility audit (Contrast, ARIA roles, screen reader flow).
