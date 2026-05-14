@@ -73,4 +73,4 @@ OmniChannel/
 
 ---
 
-*This project was created as a demonstration of technical excellence for the **ASB Digital Channels Developer** role. It bridges the gap between creative marketing vision and rigorous banking engineering.*
+*This project bridges the gap between creative marketing vision and rigorous banking engineering.*
