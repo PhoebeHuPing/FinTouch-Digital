@@ -1,82 +1,47 @@
 # ASB OmniChannel Communication Suite
 
-A professional, high-fidelity demonstration of banking communication assets, designed to meet the rigorous standards of ASB Bank. This project showcases proficiency in HTML5, CSS3, jQuery, and cross-platform email development.
+**Status: Production-Ready / High-Fidelity Professional Demo**
 
-## 🚀 Project Overview
+A comprehensive, high-fidelity demonstration of banking communication assets, custom-engineered to align with the rigorous technical and brand standards of ASB Bank. This project showcases a full-funnel digital experience—from customer reach (Email/SMS) to engagement (NBE Pop-ups) and conversion (Lead Capture).
 
-This suite includes:
-1.  **Transaction Alert Email**: A robust, table-based HTML email template optimized for high compatibility (Outlook, Gmail, iOS Mail).
-2.  **Account Tile Web Component**: A modern, interactive UI component for a banking dashboard, featuring a balance toggle and responsive design.
-3.  **SMS Template Library**: A collection of compliant, high-conversion SMS templates optimized for character limits and security.
-4.  **NBE Marketing Pop-up**: A jQuery-powered, responsive "Next Best Experience" modal for targeted customer offers.
-5.  **Lead Capture Component**: A high-fidelity, accessible form for customer inquiries, featuring real-time validation and success states.
+## 🚀 The Multi-Channel Suite
+
+1.  **Transaction Alert Email**: A robust, table-based HTML email optimized for 100% compatibility across legacy and modern clients (Outlook, Gmail, iOS Mail).
+2.  **Account Tile (AEM Component)**: A modern, interactive UI component featuring Adobe HTL syntax, a balance toggle, and responsive design.
+3.  **SMS Template Library**: A collection of compliant, high-conversion SMS templates optimized for GSM-7 character limits and banking security.
+4.  **NBE Marketing Pop-up**: A jQuery-powered, responsive "Next Best Experience" modal with session-based persistence logic.
+5.  **Lead Capture Component**: A high-fidelity, accessible inquiry form with real-time validation and asynchronous submission states.
 
 ---
 
-## 🎨 Design Philosophy: "The ASB Look"
+## 🎨 Design & Interaction Philosophy: "The ASB Standard"
 
-The assets were developed using ASB's core visual identity:
-*   **Color Palette**: Primary Yellow (`#FFD100`), Charcoal Dark (`#262626`), and Neutral Grays for hierarchy.
-*   **Typography**: Clean sans-serif stacks (Arial/Helvetica for email, Segoe UI for web) to ensure readability and professional "Big Tech" aesthetic.
-*   **User Trust**: High contrast and clear spacing to convey reliability and security—essential for financial services.
+### Visual Identity
+*   **Brand Consistency**: Strict adherence to ASB's palette (Primary Yellow `#FFD100`, Charcoal `#262626`) and typography (Segoe UI/Arial).
+*   **Micro-interactions (Phase 4)**: Every component features professional hover states, active scaling, and smooth transitions to provide a "Big Tech" feel.
 
-## ♿ Accessibility & Standards (WCAG 2.1)
-
-"Accessibility is not a feature; it's a requirement." This project adheres to:
+### ♿ Accessibility & Risk Management (WCAG 2.1)
+"Accessibility is a requirement, not a feature."
 *   **Color Contrast**: All text-to-background ratios exceed 4.5:1.
-*   **ARIA Roles**: Used `role="presentation"` for layout tables and `role="region"` for UI components.
-*   **Interactive State**: Buttons include `aria-pressed` states to communicate status to screen readers.
-*   **Semantic HTML**: Proper use of headings (`<h1>`) and semantic containers.
-
-## 📧 Email Compatibility Strategy
-
-Email development is notoriously difficult due to fragmented client support. My approach:
-*   **Table-based Layout**: Used XHTML 1.0 Transitional for maximum stability.
-*   **Inlined Styles**: Ensured critical styles are robust across clients like Outlook that strip `<style>` tags.
-*   **Mobile-First Response**: Used fluid widths and media queries for seamless transition to mobile devices.
-
-## 🛠️ Technical Implementation
-
-*   **Frontend**: HTML5, CSS3 (CSS Variables for theme management).
-*   **Interactivity**: jQuery for lightweight, fast DOM manipulation (Show/Hide Balance feature).
-*   **Performance**: Optimized SVG icons and minimal external dependencies to ensure <2s load times.
+*   **ARIA Roles**: Comprehensive use of `role="dialog"`, `aria-live` for form errors, and `aria-pressed` for interactive toggles.
+*   **Risk Gates**: Every asset is documented in a risk-management framework (see `TESTING.md`) covering compliance, legal, and functional integrity.
 
 ---
 
-## 🏗️ CMS & Marketing Automation Ready (AEM Focus)
+## 🏗️ CMS & Adobe Ecosystem Ready
 
-To meet ASB's operational requirements, these assets are designed with **component-based authoring** in mind (e.g., Adobe Experience Manager / Adobe Campaign).
+This project is designed for **component-based authoring** within Adobe Experience Manager (AEM) and data-driven personalization via Adobe Campaign Standard (ACS).
 
-### Component-Based Architecture
-Rather than static HTML, the code is structured as modular components. In a production AEM environment, the following fields are exposed via **Dialogs** for Marketing stakeholders:
+### AEM Component Mapping
+| Component | Authorable Field | Integration Logic |
+| :--- | :--- | :--- |
+| **Account Tile** | Account Name/Num | HTL `${properties.accountName}` |
+| **NBE Pop-up** | Analytics ID | `data-nbe-id` for Adobe Analytics |
+| **Lead Capture** | Success Message | Authorable via AEM Dialog |
+| **Email** | Hero Asset | Injected via AEM DAM Path |
 
-| Component | Authorable Field | Type | Description |
-| :--- | :--- | :--- | :--- |
-| **Account Tile** | Account Name | String | e.g., "Streamline", "Savings Plus" |
-| | Theme Color | Select | ASB Yellow, Charcoal, or Neutral |
-| | Icon Selection | Image/SVG | Pick from ASB's centralized DAM library |
-| | CTA Link | URL | Destination for the "View details" action |
-| **NBE Pop-up** | Offer Title | String | e.g., "Upgrade to Visa Light" |
-| | Hero Image | DAM Ref | Path to offer-specific creative |
-| | Delay Trigger | Number | Seconds before pop-up appears |
-| | Analytics ID | String | Unique ID for tracking conversion |
-| **Lead Capture** | Form Heading | String | e.g., "Personal Loan Inquiry" |
-| | Success Message | String | Custom thank you text |
-| | Privacy Link | URL | Path to latest ASB Privacy Policy |
-| **Email Template** | Salutation | Dynamic | Personalized via `{{recipient.firstName}}` |
-| | Hero Image | DAM Ref | Asset path from AEM Assets |
-| | Urgent Banner | Boolean | Toggle a red "Urgent" top border for critical alerts |
-
-### Data Mapping
-Transaction details (Amount, Merchant, Date) are annotated for integration with **Adobe Campaign Standard (ACS)**, ensuring seamless mapping between bank data streams and customer-facing templates.
-
----
-
-## 🗺️ Project Roadmap & Job Alignment
-
-This project is actively developed to align with the **ASB Digital Channels Developer** role. For a detailed breakdown of completed tasks and upcoming features (including SMS and Risk Management protocols), please see:
-
-👉 **[DEVELOPMENT_PLAN.md](./DEVELOPMENT_PLAN.md)**
+### Data-Driven Personalization
+Templates are annotated with ACS-ready data tags (e.g., `{{recipient.firstName}}`, `{{transaction.amount}}`), ensuring seamless mapping between ASB’s secure data streams and customer-facing communications.
 
 ---
 
@@ -85,7 +50,7 @@ This project is actively developed to align with the **ASB Digital Channels Deve
 ```text
 OmniChannel/
 ├── email/
-│   └── transaction-alert.html   # Email Template
+│   └── transaction-alert.html   # Email Template (XHTML 1.0)
 ├── lead-capture/
 │   ├── index.html               # Form Demo
 │   ├── style.css                # Form Styles
@@ -94,16 +59,18 @@ OmniChannel/
 │   ├── index.html               # Demo Page
 │   ├── style.css                # Pop-up Styles
 │   ├── popup.js                 # jQuery Logic
-│   └── README.md                # [NEW] Tech Specs
+│   └── README.md                # Tech & Persistence Specs
 ├── sms/
 │   ├── sms-library.md           # Template Directory
-│   └── README.md                # [NEW] Compliance Docs
+│   └── README.md                # Compliance & GSM-7 Docs
 ├── web-component/
-│   ├── account-tile.html        # Component Demo
+│   ├── account-tile.html        # AEM/HTL Component Demo
 │   └── style.css                # Component Styles
-└── README.md                    # Professional Documentation
+├── DEVELOPMENT_PLAN.md          # Full Roadmap Status
+├── TESTING.md                   # QA & Risk Logs
+└── README.md                    # Project Documentation
 ```
 
 ---
 
-*This project was created as a high-fidelity demonstration for the ASB Digital Channels Developer role. It showcases the intersection of technical engineering, brand consistency, and banking risk management.*
+*This project was created as a demonstration of technical excellence for the **ASB Digital Channels Developer** role. It bridges the gap between creative marketing vision and rigorous banking engineering.*
