@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASB Lead Capture - Personal Loan Inquiry</title>
+    <!-- jQuery for demo -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="lead-container">
+        <!-- Brand Header -->
+        <header class="lead-header">
+            <div class="logo">ASB</div>
+            <h1>Personal Loan Inquiry</h1>
+            <p>Tell us a bit about yourself, and a loan specialist will be in touch.</p>
+        </header>
+
+        <!-- Lead Capture Form -->
+        <section class="form-wrapper">
+            <form id="leadForm" novalidate>
+                
+                <!-- Field: Full Name -->
+                <div class="form-group">
+                    <label for="fullName">Full Name</label>
+                    <input type="text" id="fullName" name="fullName" placeholder="e.g. John Doe" required>
+                    <span class="error-msg" id="nameError">Please enter your full name.</span>
+                </div>
+
+                <!-- Field: Email -->
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="name@example.com" required>
+                    <span class="error-msg" id="emailError">Please enter a valid email address.</span>
+                </div>
+
+                <!-- Field: Phone Number -->
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" placeholder="e.g. 021 123 4567" required>
+                    <span class="error-msg" id="phoneError">Please enter a valid NZ phone number.</span>
+                </div>
+
+                <!-- Field: Preferred Contact Time -->
+                <div class="form-group">
+                    <label for="contactTime">Preferred Contact Time</label>
+                    <select id="contactTime" name="contactTime">
+                        <option value="morning">Morning (8am - 12pm)</option>
+                        <option value="afternoon">Afternoon (12pm - 5pm)</option>
+                        <option value="evening">Evening (5pm - 8pm)</option>
+                    </select>
+                </div>
+
+                <!-- Compliance / Privacy Note -->
+                <div class="form-compliance">
+                    <p>
+                        By submitting this form, you agree to our <a href="#">Privacy Policy</a>. ASB will only use these details to contact you regarding this specific inquiry.
+                    </p>
+                </div>
+
+                <!-- Action Button -->
+                <div class="form-actions">
+                    <button type="submit" id="submitBtn" class="btn-primary">
+                        <span class="btn-text">Request a Callback</span>
+                        <div class="loader" style="display: none;"></div>
+                    </button>
+                </div>
+            </form>
+
+            <!-- Success State (Hidden by default) -->
+            <div id="successState" class="success-box" style="display: none;">
+                <div class="success-icon">✓</div>
+                <h2>Thank you, <span id="userName">Customer</span>!</h2>
+                <p>Your inquiry has been received. One of our specialists will call you during your preferred time.</p>
+                <button class="btn-secondary" onclick="location.reload()">Back to Home</button>
+            </div>
+        </section>
+
+        <!-- Footer Footer -->
+        <footer class="lead-footer">
+            <p>&copy; 2026 ASB Bank Limited. One step ahead.</p>
+        </footer>
+    </div>
+
+    <script src="form-logic.js"></script>
+</body>
+</html>

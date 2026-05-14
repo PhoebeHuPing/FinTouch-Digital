@@ -19,10 +19,10 @@ Deliver a high-fidelity demonstration of digital content experiences that connec
     - [ ] WCAG 2.1 Accessibility audit (Contrast, ARIA roles, screen reader flow).
     - [ ] Compliance & Legal (Tracking tags, unsubscribe logic, privacy disclaimers).
 
-## 🟡 Phase 3: Multi-Channel Expansion (Status: In Progress)
+## 🟢 Phase 3: Multi-Channel Expansion (Status: Completed)
 - [x] **SMS Channel**: Develop a directory of compliant, high-conversion SMS templates.
 - [x] **Targeted Pop-up (NBE)**: Build a responsive modal UI for "Next Best Experience" or "Targeted Pop-up" scenarios.
-- [ ] **Lead Capture Component**: Create a lightweight "Leads" capture form component.
+- [x] **Lead Capture Component**: Create a lightweight "Leads" capture form component.
 
 ## ⚪ Phase 4: Technical & Interactive Polish
 - [ ] **jQuery Advanced Interactivity**: Implement loading states and success feedback for interactive components.

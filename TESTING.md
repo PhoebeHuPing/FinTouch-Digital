@@ -75,6 +75,7 @@ In the event of a critical error post-deployment (e.g., broken link, incorrect i
 | 2026-05-14 | `transaction-alert.html` | v1.0.1 | Gemini CLI | PASS | Added ARIA roles to layout tables. |
 | 2026-05-14 | `sms-library.md` | v1.0.0 | Gemini CLI | PASS | Verified character counts and compliance. |
 | 2026-05-14 | `nbe-popup` | v1.0.0 | Gemini CLI | PASS | Responsive check OK; jQuery trigger/dismiss logic verified. |
+| 2026-05-14 | `lead-capture` | v1.0.0 | Gemini CLI | PASS | Form validation, success state, and accessibility verified. |
 
 ---
 *Last Updated: May 14, 2026*

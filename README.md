@@ -9,6 +9,7 @@ This suite includes:
 2.  **Account Tile Web Component**: A modern, interactive UI component for a banking dashboard, featuring a balance toggle and responsive design.
 3.  **SMS Template Library**: A collection of compliant, high-conversion SMS templates optimized for character limits and security.
 4.  **NBE Marketing Pop-up**: A jQuery-powered, responsive "Next Best Experience" modal for targeted customer offers.
+5.  **Lead Capture Component**: A high-fidelity, accessible form for customer inquiries, featuring real-time validation and success states.
 
 ---
 
@@ -59,6 +60,9 @@ Rather than static HTML, the code is structured as modular components. In a prod
 | | Hero Image | DAM Ref | Path to offer-specific creative |
 | | Delay Trigger | Number | Seconds before pop-up appears |
 | | Analytics ID | String | Unique ID for tracking conversion |
+| **Lead Capture** | Form Heading | String | e.g., "Personal Loan Inquiry" |
+| | Success Message | String | Custom thank you text |
+| | Privacy Link | URL | Path to latest ASB Privacy Policy |
 | **Email Template** | Salutation | Dynamic | Personalized via `{{recipient.firstName}}` |
 | | Hero Image | DAM Ref | Asset path from AEM Assets |
 | | Urgent Banner | Boolean | Toggle a red "Urgent" top border for critical alerts |
@@ -82,6 +86,10 @@ This project is actively developed to align with the **ASB Digital Channels Deve
 OmniChannel/
 ├── email/
 │   └── transaction-alert.html   # Email Template
+├── lead-capture/
+│   ├── index.html               # Form Demo
+│   ├── style.css                # Form Styles
+│   └── form-logic.js            # Validation Logic
 ├── nbe-popup/
 │   ├── index.html               # Demo Page
 │   ├── style.css                # Pop-up Styles
