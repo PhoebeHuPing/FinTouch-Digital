@@ -8,6 +8,7 @@ This suite includes:
 1.  **Transaction Alert Email**: A robust, table-based HTML email template optimized for high compatibility (Outlook, Gmail, iOS Mail).
 2.  **Account Tile Web Component**: A modern, interactive UI component for a banking dashboard, featuring a balance toggle and responsive design.
 3.  **SMS Template Library**: A collection of compliant, high-conversion SMS templates optimized for character limits and security.
+4.  **NBE Marketing Pop-up**: A jQuery-powered, responsive "Next Best Experience" modal for targeted customer offers.
 
 ---
 
@@ -54,6 +55,10 @@ Rather than static HTML, the code is structured as modular components. In a prod
 | | Theme Color | Select | ASB Yellow, Charcoal, or Neutral |
 | | Icon Selection | Image/SVG | Pick from ASB's centralized DAM library |
 | | CTA Link | URL | Destination for the "View details" action |
+| **NBE Pop-up** | Offer Title | String | e.g., "Upgrade to Visa Light" |
+| | Hero Image | DAM Ref | Path to offer-specific creative |
+| | Delay Trigger | Number | Seconds before pop-up appears |
+| | Analytics ID | String | Unique ID for tracking conversion |
 | **Email Template** | Salutation | Dynamic | Personalized via `{{recipient.firstName}}` |
 | | Hero Image | DAM Ref | Asset path from AEM Assets |
 | | Urgent Banner | Boolean | Toggle a red "Urgent" top border for critical alerts |
@@ -77,6 +82,10 @@ This project is actively developed to align with the **ASB Digital Channels Deve
 OmniChannel/
 ├── email/
 │   └── transaction-alert.html   # Email Template
+├── nbe-popup/
+│   ├── index.html               # Demo Page
+│   ├── style.css                # Pop-up Styles
+│   └── popup.js                 # jQuery Logic
 ├── sms/
 │   └── sms-library.md           # SMS Template Library
 ├── web-component/

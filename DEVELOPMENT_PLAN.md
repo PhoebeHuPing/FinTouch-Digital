@@ -21,7 +21,7 @@ Deliver a high-fidelity demonstration of digital content experiences that connec
 
 ## 🟡 Phase 3: Multi-Channel Expansion (Status: In Progress)
 - [x] **SMS Channel**: Develop a directory of compliant, high-conversion SMS templates.
-- [ ] **Targeted Pop-up (NBE)**: Build a responsive modal UI for "Next Best Experience" or "Targeted Pop-up" scenarios.
+- [x] **Targeted Pop-up (NBE)**: Build a responsive modal UI for "Next Best Experience" or "Targeted Pop-up" scenarios.
 - [ ] **Lead Capture Component**: Create a lightweight "Leads" capture form component.
 
 ## ⚪ Phase 4: Technical & Interactive Polish
