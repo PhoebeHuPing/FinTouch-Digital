@@ -157,8 +157,37 @@ header {
 
 .btn-primary:hover {
     background: #e6bc00;
+    box-shadow: 0 4px 12px rgba(255, 209, 0, 0.4);
 }
 
+.btn-primary:active {
+    transform: scale(0.97);
+}
+
+.btn-link:hover {
+    color: var(--asb-charcoal);
+}
+
+/* Accessibility Focus States */
+button:focus-visible {
+    outline: 3px solid var(--asb-yellow);
+    outline-offset: 3px;
+}
+
+.nbe-close:hover {
+    transform: rotate(90deg);
+    transition: transform 0.2s ease;
+}
+
+/* Responsive Audit Adjustments */
+@media (max-width: 320px) {
+    .nbe-content {
+        padding: 20px;
+    }
+    .nbe-content h2 {
+        font-size: 18px;
+    }
+}
 .btn-link {
     background: none;
     border: none;
