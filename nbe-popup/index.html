@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASB NBE Pop-up Component</title>
+    <!-- jQuery for demo -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Demo Background Content -->
+    <div class="demo-page">
+        <header>
+            <div class="logo">ASB</div>
+        </header>
+        <main>
+            <h1>Welcome back, Christopher</h1>
+            <p>Your dashboard is ready. Explore your accounts and new offers.</p>
+            <div class="placeholder-card"></div>
+            <div class="placeholder-card"></div>
+        </main>
+    </div>
+
+    <!-- NBE Pop-up Component -->
+    <!-- Authorable: data-nbe-id identifies this specific offer in Analytics -->
+    <div id="nbe-overlay" class="nbe-overlay" style="display: none;" data-nbe-id="visa-light-upgrade-2026">
+        <div class="nbe-modal" role="dialog" aria-labelledby="nbe-title" aria-describedby="nbe-desc">
+            
+            <!-- Close Button -->
+            <button class="nbe-close" aria-label="Close offer">&times;</button>
+            
+            <!-- Hero Image (Authorable) -->
+            <div class="nbe-hero">
+                <div class="hero-placeholder">
+                    <!-- In production, this would be an <img> from AEM DAM -->
+                    <span class="badge">Special Offer</span>
+                </div>
+            </div>
+
+            <div class="nbe-content">
+                <!-- Authorable: Title -->
+                <h2 id="nbe-title">Switch to Visa Light & Save</h2>
+                
+                <!-- Authorable: Description -->
+                <p id="nbe-desc">
+                    Enjoy a lower interest rate on your purchases for the first 6 months. It's our way of helping you move forward.
+                </p>
+
+                <!-- Authorable: CTA Button -->
+                <div class="nbe-actions">
+                    <button class="btn-primary" id="nbe-cta">Tell me more</button>
+                    <button class="btn-link nbe-dismiss">Not now</button>
+                </div>
+            </div>
+
+            <!-- Compliance Disclaimer (Authorable) -->
+            <footer class="nbe-footer">
+                <p>T&Cs apply. Offer ends 30 June 2026.</p>
+            </footer>
+        </div>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>

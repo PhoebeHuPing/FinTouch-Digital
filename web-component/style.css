@@ -27,6 +27,30 @@ body {
 
 .account-tile:hover {
     transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* Micro-interactions & Polish */
+.btn-toggle:active {
+    transform: scale(0.95);
+}
+
+.link-details {
+    transition: color 0.2s ease;
+}
+
+/* Accessibility Focus States */
+button:focus-visible, a:focus-visible {
+    outline: 3px solid var(--asb-dark);
+    outline-offset: 2px;
+}
+
+/* Responsive Audit */
+@media (max-width: 375px) {
+    .account-tile {
+        width: 100%;
+        margin: 0 10px;
+    }
 }
 
 .tile-header {

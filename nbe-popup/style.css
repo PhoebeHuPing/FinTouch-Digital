@@ -1,0 +1,221 @@
+/* ASB Brand Variables */
+:root {
+    --asb-yellow: #FFD100;
+    --asb-charcoal: #262626;
+    --asb-white: #FFFFFF;
+    --asb-gray-light: #F4F4F4;
+    --asb-gray-med: #D9D9D9;
+    --overlay-bg: rgba(0, 0, 0, 0.7);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--asb-charcoal);
+    line-height: 1.5;
+}
+
+/* Demo Background Styles */
+.demo-page {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header {
+    padding: 20px 0;
+    border-bottom: 2px solid var(--asb-yellow);
+    margin-bottom: 40px;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 24px;
+    background: var(--asb-yellow);
+    display: inline-block;
+    padding: 5px 15px;
+}
+
+.placeholder-card {
+    height: 200px;
+    background: var(--asb-gray-light);
+    margin: 20px 0;
+    border-radius: 8px;
+}
+
+/* NBE Component Styles */
+.nbe-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--overlay-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    padding: 20px;
+}
+
+.nbe-modal {
+    background: var(--asb-white);
+    width: 100%;
+    max-width: 450px;
+    border-radius: 4px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    animation: slideUp 0.4s ease-out;
+}
+
+@keyframes slideUp {
+    from { transform: translateY(50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.nbe-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 28px;
+    color: var(--asb-white);
+    cursor: pointer;
+    z-index: 10;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+}
+
+.nbe-hero {
+    height: 180px;
+    background: var(--asb-charcoal);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.hero-placeholder {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, var(--asb-charcoal) 0%, #444 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.badge {
+    background: var(--asb-yellow);
+    color: var(--asb-charcoal);
+    padding: 4px 12px;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 20px;
+}
+
+.nbe-content {
+    padding: 30px;
+    text-align: center;
+}
+
+.nbe-content h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.nbe-content p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 25px;
+}
+
+.nbe-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.btn-primary {
+    background: var(--asb-yellow);
+    border: none;
+    padding: 12px 25px;
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--asb-charcoal);
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background 0.2s;
+}
+
+.btn-primary:hover {
+    background: #e6bc00;
+    box-shadow: 0 4px 12px rgba(255, 209, 0, 0.4);
+}
+
+.btn-primary:active {
+    transform: scale(0.97);
+}
+
+.btn-link:hover {
+    color: var(--asb-charcoal);
+}
+
+/* Accessibility Focus States */
+button:focus-visible {
+    outline: 3px solid var(--asb-yellow);
+    outline-offset: 3px;
+}
+
+.nbe-close:hover {
+    transform: rotate(90deg);
+    transition: transform 0.2s ease;
+}
+
+/* Responsive Audit Adjustments */
+@media (max-width: 320px) {
+    .nbe-content {
+        padding: 20px;
+    }
+    .nbe-content h2 {
+        font-size: 18px;
+    }
+}
+.btn-link {
+    background: none;
+    border: none;
+    color: #666;
+    text-decoration: underline;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.nbe-footer {
+    padding: 15px;
+    background: var(--asb-gray-light);
+    border-top: 1px solid var(--asb-gray-med);
+    text-align: center;
+}
+
+.nbe-footer p {
+    font-size: 11px;
+    color: #888;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 480px) {
+    .nbe-modal {
+        max-width: 100%;
+    }
+    
+    .nbe-content h2 {
+        font-size: 20px;
+    }
+}
