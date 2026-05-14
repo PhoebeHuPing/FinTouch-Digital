@@ -85,9 +85,11 @@ OmniChannel/
 ├── nbe-popup/
 │   ├── index.html               # Demo Page
 │   ├── style.css                # Pop-up Styles
-│   └── popup.js                 # jQuery Logic
+│   ├── popup.js                 # jQuery Logic
+│   └── README.md                # [NEW] Tech Specs
 ├── sms/
-│   └── sms-library.md           # SMS Template Library
+│   ├── sms-library.md           # Template Directory
+│   └── README.md                # [NEW] Compliance Docs
 ├── web-component/
 │   ├── account-tile.html        # Component Demo
 │   └── style.css                # Component Styles
@@ -96,4 +98,4 @@ OmniChannel/
 
 ---
 
-*This project was created as a demonstration of technical proficiency and design alignment for ASB Bank.*
+*This project was created as a high-fidelity demonstration for the ASB Digital Channels Developer role. It showcases the intersection of technical engineering, brand consistency, and banking risk management.*
