@@ -73,4 +73,4 @@ OmniChannel/
 
 ---
 
-*This project bridges the gap between creative marketing vision and rigorous banking engineering.*
+*This project was bridges the gap between creative marketing vision and rigorous banking engineering.*
