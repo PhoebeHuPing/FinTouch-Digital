@@ -1,6 +1,6 @@
 # ASB OmniChannel Communication Suite
 
-**Status: Production-Ready / High-Fidelity Professional Demo**
+**Status: High-Fidelity Prototype / QA In Progress**
 
 A comprehensive, high-fidelity demonstration of banking communication assets, custom-engineered to align with the rigorous technical and brand standards of ASB Bank. This project showcases a full-funnel digital experience—from customer reach (Email/SMS) to engagement (NBE Pop-ups) and conversion (Lead Capture).
 
